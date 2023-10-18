@@ -1,0 +1,76 @@
+@tailwind base;
+@tailwind components;
+
+@layer base {
+    body {
+        @apply font-barlow;
+    }
+
+    h1 {
+        @apply text-5xl font-bold;
+    }
+
+    h2 {
+        @apply text-4xl;
+    }
+
+    h3 {
+        @apply text-3xl;
+    }
+
+    h4 {
+        @apply text-2xl;
+    }
+}
+
+@layer components {
+    .landing-inner {
+        @apply text-white h-full m-auto flex flex-col justify-center items-center text-center;
+    }
+
+    .primary-color {
+        @apply;
+    }
+
+    /* BUTTON SELECT */
+
+    .btn {
+        @apply font-bold py-2 px-4 rounded;
+    }
+
+    .btn-small {
+        @apply font-bold py-1 px-2 rounded;
+    }
+
+    .btn-blue {
+        @apply bg-blue-500 text-white;
+    }
+
+    .btn-blue:hover {
+        @apply bg-blue-700;
+    }
+
+    .btn-green {
+        @apply bg-green-400;
+    }
+
+    .btn-green:hover {
+        @apply bg-green-500;
+    }
+
+    .btn-animation:after {
+        @apply absolute bg-slate-100 top-0 left-0 w-0 h-0 content-[""] inline-block transition-all ease-in-out duration-[400ms] z-[-1];
+    }
+
+    .btn-animation:hover:after {
+        @apply w-full h-full;
+    }
+
+    .btn-scale-animation {
+        @apply hover:scale-125 transform ease-out duration-300 cursor-pointer;
+    }
+
+    .btn-floating {
+        @apply fixed bottom-8 right-8 p-2 shadow-md shadow-slate-500 rounded-full bg-gradient-to-r from-cyan-300 to-green-500 z-50 btn-scale-animation;
+    }
+}

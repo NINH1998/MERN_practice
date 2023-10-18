@@ -1,0 +1,50 @@
+POST http://localhost:5000/api/auth/register
+Content-Type: application/json
+
+{
+    "username" : "Ninh2508",
+    "password" : "Ninh123"
+}
+
+###
+
+POST http://localhost:5000/api/auth/login
+Content-Type: application/json
+
+{
+    "username" : "Ninh2508",
+    "password" : "Ninh123"
+}
+
+###
+POST http://localhost:5000/api/posts
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NTIyNzA4ZDEyYTYyNjFiMjQ3NjljM2YiLCJpYXQiOjE2OTY3NTU5MDF9.4h8fe4r75Qyry_6iXI9-DDBuBNkJqp7Ib3xMonFsaQg
+
+{
+    "title" : "React",
+    "description" : "abc",
+    "url" : "shopee.com",
+    "status" : "LEARNED"
+}
+
+###
+GET http://localhost:5000/api/posts
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NTIyNzA4ZDEyYTYyNjFiMjQ3NjljM2YiLCJpYXQiOjE2OTY3NTU5MDF9.4h8fe4r75Qyry_6iXI9-DDBuBNkJqp7Ib3xMonFsaQg
+
+###
+PUT http://localhost:5000/api/posts/652270d212a6261b24769c42
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NTIyNzA4ZDEyYTYyNjFiMjQ3NjljM2YiLCJpYXQiOjE2OTY3NTU5MDF9.4h8fe4r75Qyry_6iXI9-DDBuBNkJqp7Ib3xMonFsaQg
+
+
+{
+    "title": "Vue",
+    "description": "VUEE123EEE1111",
+    "url": "https://vuejs.org",
+    "status": "LEARNING"
+}
+
+###
+DELETE http://localhost:5000/api/posts/652270d212a6261b24769c42
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NTIyNzA4ZDEyYTYyNjFiMjQ3NjljM2YiLCJpYXQiOjE2OTY3NTU5MDF9.4h8fe4r75Qyry_6iXI9-DDBuBNkJqp7Ib3xMonFsaQg
